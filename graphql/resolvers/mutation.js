@@ -70,7 +70,7 @@ module.exports = {
   changeEventRoom (root, { id, roomId }, context) {
     return models.Event.findById(id)
             .then(event => {
-              event.setRoom(id);
+              return event.setRoom(roomId).then(() => event);
             });
   },
 
