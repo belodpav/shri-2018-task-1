@@ -51,6 +51,7 @@ type Query {
   users: [User]
   event(id: ID!): Event
   events: [Event]
+  eventsByDateRange(dateStart: Date!, dateEnd: Date!): [Event]
   room(id: ID!): Room
   rooms: [Room]
 }
